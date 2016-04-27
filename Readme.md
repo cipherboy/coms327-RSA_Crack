@@ -20,6 +20,15 @@ Once the seed is found, use `rsa-gen <bits> <seed>` to recreate the
 private key or `rsa-reverse <start time> <end time> <seed>` to find
 the time the key was generated.
 
+Further, due to the way the seeds are constructed, we know that, of the lower
+20 bits, there are only 1 million possible combinations of arrangements;
+that is, there are 48576k unused values in the lower 20 bits of the seed.
+Thus, over the entire seed, 2^12 * (2^20 - 1000000) unused seeds, which is
+198,967,296. Out of the entire 2^32 search space, this is ~4.6% of possible
+seeds that are unused. Therefore, a strict brute force approach over the entire
+key space as implemented in rsa-crack searches some unnecessary values, but is
+relatively small in comparison to the entire search space.  
+
 ## Start
     date --date="Apr 22 16:50:00 CDT 2016" +"%s"
     1461361800.0
