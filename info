@@ -1,3 +1,8 @@
+date --date="Apr 22 16:50:00 CDT 2016" +"%s"
+    1461361800
+date --date="Apr 22 16:51:59 CDT 2016" +"%s"
+    1461361919
+
 Starting seed: 3363831808
 Ending seed: 3489612351
 
