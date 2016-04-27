@@ -5,6 +5,7 @@
 #include <sys/time.h>
 #include <string.h>
 
+// Copyright (C) Jeremy Sheaffer
 
 /* Implementaation of the Extended Euclidean Algorithm (to find GCD) */
 void mod_inv(mpz_t result, const mpz_t a, const mpz_t n)

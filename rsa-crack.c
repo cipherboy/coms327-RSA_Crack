@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
 
     int j = 0;
 
+    // Loop over all seeds. 
     for (; loops < scount; loops++) {
         gmp_randseed_ui(state,  seed+loops);
 

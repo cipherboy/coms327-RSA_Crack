@@ -1,8 +1,10 @@
 # COMS 327 - RSA Public Key cracker
 
+NOTE: rsa.c is code from Jeremy Sheaffer, Iowa State University.
+
 Need to know the relative time of the key's creation:
 
-4:51PM on Friday (time from Jeremy--different from class)
+    4:51PM on Friday (time from Jeremy--different from class).
 
 ## Overview
 To build all programs:
@@ -16,7 +18,7 @@ Can be (manually) parallelized over multiple machines.
 
 Once the seed is found, use `rsa-gen <bits> <seed>` to recreate the
 private key or `rsa-reverse <start time> <end time> <seed>` to find
-the time the key was generated. 
+the time the key was generated.
 
 ## Start
     date --date="Apr 22 16:50:00 CDT 2016" +"%s"

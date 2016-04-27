@@ -21,12 +21,11 @@ void generate_keys(unsigned bits, unsigned seed)
     mpz_init(d);
 
     /* GMP allows you to choose your random number generator.  mt is *
-     * Mersenne Twister, which is generally considered a secure      *
+     * Mersenne Twister, which is generally NOT considered a secure  *
      * algorithm.                                                    */
     gmp_randinit_mt(state);
-    /* Seed the random number generator.  Using time is generally a  *
-     * bad idea, but mixing in microseconds like this improves it    *
-     * somewhat (still not great).                                   */
+    
+    /* Seed the random number generator.*/
     gmp_randseed_ui(state, seed);
     do {
         /* Choose two large, random primes, p and q.. */
